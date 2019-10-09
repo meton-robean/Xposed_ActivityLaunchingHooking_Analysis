@@ -1,8 +1,13 @@
 # Xposed_ActivityLifeCycle_Analysis
 Android System Activity Launching and  LifeCycle Analysis using Xposed Hooking Framework (利用Xposed分析Activity启动底层细节与生命周期)  
 
+这是安卓操作系统底层分析的其中一个课程作业 
+### 目录介绍:
+src/: exposed hooking 安卓活动启动过程的 实现  
+doc/: 实验使用说明和测试分析文档  
+test/: 实验用的测试app demo以及实验测试结果记录  
+
 ### 背景介绍:  
-这是安卓操作系统底层分析的其中一个课程作业
 #### Activity启动的底层细节与分析  
 ![Activity启动流程](https://github.com/meton-robean/Xposed_ActivityLifeCycle_Analysis/blob/master/doc/Activity_Launching_Details2.png)  
 ![利用Xposed进行hooking与分析](https://github.com/meton-robean/Xposed_ActivityLifeCycle_Analysis/blob/master/doc/Activity_Hooking_Details.png) 
@@ -10,11 +15,6 @@ Android System Activity Launching and  LifeCycle Analysis using Xposed Hooking F
 
 #### 要求：  
 选定三个app（存放与/test/3examples下），利用Xposed框架跟踪安卓系统底层活动的启动过程，进行分析.  
-
-### 目录介绍:  
-src/: exposed hooking 安卓活动启动过程的 实现  
-doc/: 实验使用说明和测试分析文档  
-test/: 实验用的测试app demo以及实验测试结果记录  
 
 ### 测试结果:   
 ![其中一个app的活动启动环节说明](https://github.com/meton-robean/Xposed_ActivityLifeCycle_Analysis/blob/master/test/test_result_backup/pic2/FileManager.png)  
