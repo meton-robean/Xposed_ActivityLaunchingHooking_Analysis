@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.a0w1.xposed_0w1"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //0w1 add  android apk name
+        archivesBaseName = "xposed_0w1" + "-${releaseTime()}"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+//0w1 add  android release time
+def releaseTime() {
+    return new Date().format("yyyyMMddkkmm")
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //0w1 add  android XposedBridge-api
+    //    implementation files('libs/XposedBridge-api-82.jar')
+    provided 'de.robv.android.xposed:api:82'
+}
+
+//0w1 add  android XposedBridge-api
+repositories {
+    jcenter();
+}
+dependencies {
+    provided 'de.robv.android.xposed:api:82'
+}
